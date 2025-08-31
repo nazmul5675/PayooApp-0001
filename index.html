@@ -5,13 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo app</title>
+    <!-- outfit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <!-- daisy ui and tailwind cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .outfit-font {
+            font-family: "Outfit", sans-serif;
+
+        }
+    </style>
 </head>
 
-<body>
-    <button class="btn bg-black text-white p-5"> btn</button>
+<body class="bg-[#f4f5f7] outfit-font w-1/4 mx-auto mt-30  rounded-xl">
+
+    <section class=" p-10 pb-32">
+        <div class="h-36 bg-[url('./assets/bg.png')] bg-cover mb-10">
+
+            <img class="w-20 mx-auto relative py-10 " src="/assets/Group.png" alt="">
+        </div>
+        <div id="login-item-container" class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
+            <p class="font-semibold text-[18px] fontext-black">Mobile Number</p>
+            <input id="mobile-number" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                placeholder="Enter Your Number">
+            <p class="font-semibold text-[18px] fontext-black">4 Digit Pin</p>
+            <input id="pin-number" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                placeholder="Enter 4 Digit Pin">
+            <button id="login" class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Login</button>
+        </div>
+    </section>
+
+    <script src="/login.js">
+
+    </script>
 </body>
 
 </html>
