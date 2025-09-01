@@ -14,7 +14,7 @@ document.getElementById('login').addEventListener('click', function () {
         console.log('show error');
         const p = document.createElement('p')
         p.textContent = " Invalid pin or mobile number"
-        p.classList.add('text-red', 'text-[10px]', 'underline', 'mx-auto');
+        p.classList.add('text-red-600', 'text-[10px]', 'underline', 'mx-auto', 'text-center');
         document.getElementById("login-item-container").append(p)
 
     }

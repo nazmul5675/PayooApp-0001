@@ -5,11 +5,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main page</title>
+    <!-- outfit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisy ui and tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .outfit-font {
+            font-family: "Outfit", sans-serif;
+
+        }
+    </style>
 </head>
 
 <body class="bg-[#f4f5f7] outfit-font w-1/4 mx-auto mt-30  rounded-xl">
 
-    <h1>wellcome</h1>
+    <div class="flex justify-between items-center p-5 bg-[#fff]">
+        <div class="flex">
+            <img class="w-16 " src="./assets/Group.png" alt="">
+            <div class="pl-3 pr-24">
+                <p class="font-bold">$ <span id="availablebalance">4500</span></p>
+                <p>Available Balance</p>
+            </div>
+        </div>
+        <button id="log-out" class="btn ">Log Out</button>
+    </div>
+    <section class="p-5 bg-[#fff] border-t border-zinc-300 mb-10 rounded-b-xl">
+        <h1 class="font-bold text-3xl text-black mb-3 ">Wellcome to Payoo!</h1>
+        <p class="font-normal text-zinc-500 mb-3">Enjoy easy and convenient financial services with us. Cashout charge
+            is low </p>
+
+        <div class="grid grid-rows-2 grid-cols-3 gap-3">
+            <div id="add-money" class="flex flex-col justify-center items-center border border-zinc-300 p-3 rounded-xl
+            ">
+                <img src="./assets/wallet1.png" alt="">
+                <p class="text-sm text-zinc-700">Add Money</p>
+                </img>
+            </div>
+
+            <div id="cashout" class="flex flex-col justify-center items-center border border-zinc-300 p-3 rounded-xl">
+                <img src="./assets/send1.png" alt="">
+                <p class="text-sm text-zinc-700">Cashout</p>
+                </img>
+            </div>
+            <div id="transfermoneys"
+                class="flex flex-col justify-center items-center border border-zinc-300 p-3 rounded-xl">
+                <img src="./assets/money1.png" alt="">
+                <p class="text-sm text-zinc-700">Transfer Money</p>
+                </img>
+            </div>
+            <div id="getbonus" class="flex flex-col justify-center items-center border border-zinc-300 p-3 rounded-xl">
+                <img src="./assets/bonus1.png" alt="">
+                <p class="text-sm text-zinc-700">Get Bonus</p>
+                </img>
+            </div>
+            <div id="paybill" class="flex flex-col justify-center items-center border border-zinc-300 p-3 rounded-xl">
+                <img src="./assets/purse1.png" alt="">
+                <p class="text-sm text-zinc-700">Pay Bill</p>
+                </img>
+            </div>
+            <div id="transactionbtn"
+                class="flex flex-col justify-center items-center border border-zinc-300 p-3 rounded-xl">
+                <img src="./assets/transaction1.png" alt="">
+                <p class="text-sm text-zinc-700">Transactions</p>
+                </img>
+            </div>
+        </div>
+    </section>
+
+    <!--Latest Payment  -->
+    <section id="transaction-section" class="p-5 ">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="font-bold text-3xl text-black ">Latest Payment</h1>
+            <p class="text-sm text-zinc-700">View all</p>
+        </div>
+
+        <div class="mb-20">
+            <div class="flex justify-between items-center bg-white border border-zinc-300 p-5 rounded-2xl mb-2">
+                <div class="flex gap-5">
+                    <img class="w-16 h-16 bg-white rounded-full p-2" src="./assets/wallet1.png" alt="">
+                    <div class="mb-1">
+                        <h3>Electricity Bill</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <h1>3</h1>
+            </div>
+            <div class="flex justify-between items-center bg-white border border-zinc-300 p-5 rounded-2xl mb-2">
+                <div class="flex gap-5">
+                    <img class="w-16 h-16 bg-white rounded-full p-2" src="./assets/wallet1.png" alt="">
+                    <div class="mb-1">
+                        <h3>Electricity Bill</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <h1>3</h1>
+            </div>
+            <div class="flex justify-between items-center bg-white border border-zinc-300 p-5 rounded-2xl mb-2">
+                <div class="flex gap-5">
+                    <img class="w-16 h-16 bg-white rounded-full p-2" src="./assets/wallet1.png" alt="">
+                    <div class="mb-1">
+                        <h3>Electricity Bill</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <h1>3</h1>
+            </div>
+            <div class="flex justify-between items-center bg-white border border-zinc-300 p-5 rounded-2xl mb-2">
+                <div class="flex gap-5">
+                    <img class="w-16 h-16 bg-white rounded-full p-2" src="./assets/wallet1.png" alt="">
+                    <div class="mb-1">
+                        <h3>Electricity Bill</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <h1>3</h1>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- add money section -->
+    <section id="add-money-section" class="p-5 hidden">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="font-bold text-3xl text-black ">Add Money</h1>
+        </div>
+        <div>
+            <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
+                <p class="font-semibold text-[18px] fontext-black">Select A Bank</p>
+                <select id="bankname" class="select rounded-full border-none bg-slate-100 p-3 my-3 text-zinc-500">
+                    <option disabled selected class="">Select A Bank</option>
+                    <option>Brac Bank</option>
+                    <option>Islami Bank</option>
+                    <option>Krishi Bank</option>
+                    <option>Sonali Bank</option>
+                    <option>Rupali Bank</option>
+                </select>
+                <p class="font-semibold text-[18px] fontext-black">Bank Account Number</p>
+                <input id="accountnum" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 11 digit account number">
+                <p class="font-semibold text-[18px] fontext-black">Amount to Add</p>
+                <input id="addamount" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Add Amount ">
+                <p class="font-semibold text-[18px] fontext-black"> Pin Number</p>
+                <input id="pinnum" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 4 Digit Pin">
+                <button id="addmoneybluebtn" class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Add
+                    Money</button>
+            </div>
+        </div>
+    </section>
+    <!-- cash out section -->
+    <section id="cash-out-section" class="p-5 hidden">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="font-bold text-3xl text-black ">Cash Out</h1>
+        </div>
+        <div>
+            <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
+                <p class="font-semibold text-[18px] fontext-black">Agent Number</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 11 digit number">
+                <p class="font-semibold text-[18px] fontext-black">Amount</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter amount to withdraw">
+
+                <p class="font-semibold text-[18px] fontext-black"> Pin Number</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 4 Digit Pin">
+                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Withdraw Money</button>
+            </div>
+        </div>
+    </section>
+    <!-- Transfer Money -->
+    <section id="transfer-money-section" class="p-5 hidden">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="font-bold text-3xl text-black ">Transfer Money</h1>
+        </div>
+        <div>
+            <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
+                <p class="font-semibold text-[18px] fontext-black">User Account Number</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 11 digit number">
+                <p class="font-semibold text-[18px] fontext-black">Amount</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter amount to withdraw">
+
+                <p class="font-semibold text-[18px] fontext-black"> Pin Number</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 4 Digit Pin">
+                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Send Now</button>
+            </div>
+        </div>
+    </section>
+    <!-- get Bonus -->
+    <section id="get-bonus-section" class="p-5 hidden">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="font-bold text-3xl text-black ">Get Bonus</h1>
+        </div>
+        <div>
+            <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
+                <p class="font-semibold text-[18px] fontext-black">Enter Bonus Coupon</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter your coupon">
+
+                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Get Bonus</button>
+            </div>
+        </div>
+    </section>
+    <!-- Pay bill -->
+    <section id="pay-bill-section" class="p-5 pb-10 hidden">
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="font-bold text-3xl text-black ">Pay Bill</h1>
+        </div>
+        <div>
+            <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
+                <p class="font-semibold text-[18px] fontext-black">Select To Pay</p>
+                <select class="select rounded-full border-none bg-slate-100 p-3 my-3 text-zinc-500">
+                    <option disabled selected class="">Select to Pay</option>
+                    <option>Bkash</option>
+                    <option>Rocket</option>
+                    <option>U-Pay</option>
+                </select>
+                <p class="font-semibold text-[18px] fontext-black">Biller Account Number</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter account number">
+                <p class="font-semibold text-[18px] fontext-black">Amount to pay</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Add Amount to pay">
+                <p class="font-semibold text-[18px] fontext-black"> Pin Number</p>
+                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                    placeholder="Enter 4 Digit Pin">
+                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Pay Now</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+    </script>
+
+    <script src="./main.js"></script>
+
 </body>
 
 </html>
