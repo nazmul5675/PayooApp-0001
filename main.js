@@ -49,6 +49,10 @@ document.getElementById('transactionbtn').addEventListener('click', function () 
     showSection('transaction-section');
     showBtnColor('transactionbtn')
 })
+// show value function to get input value
+function showValue(inputIdToGetValue) {
+    return document.getElementById(inputIdToGetValue).value;
+}
 
 // active add money to manage add money and check pin num to validate
 document.getElementById('addmoneybluebtn').addEventListener('click', function () {
@@ -59,6 +63,10 @@ document.getElementById('addmoneybluebtn').addEventListener('click', function ()
     const addAmount = parseInt(document.getElementById('addamount').value);
 
     const pinNumber = document.getElementById('pinnum').value;
+    if (accountNum.length !== 11) {
+        alert('Account number must be 11 digit');
+        return;
+    }
     if (pinNumber === '1234'
     ) {
         const availableBalance = parseInt(document.getElementById('availablebalance').innerText);
@@ -80,5 +88,57 @@ document.getElementById('log-out').addEventListener('click', function () {
     window.location.href = "index.html"
 })
 
+// cash out btn to manage cash out and check pin num to validate
+
+document.getElementById('withdrawbtn').addEventListener('click', function () {
+    const agentNumber = showValue('agentnum');
+    const amountNum = showValue('cashoutammount');
+
+    const pinNum = showValue('cashoutpinnum')
+
+    const UpAmount = document.getElementById('availablebalance').innerText;
+
+    if (agentNumber.length !== 11) {
+        alert('Account number must be 11 digit')
+        return;
+    }
+    if (pinNum === '1234') {
+        const updateAmount = parseInt(UpAmount) - parseInt(amountNum);
+        document.getElementById('availablebalance').innerText = updateAmount;
+
+    }
+})
+
+// send money btn to manage send money and check pin num to validate
+document.getElementById('sendnow').addEventListener('click', function () {
+    const userAccountNum = showValue('useraccnum');
+    const sendAmount = showValue('sendammount');
+
+    const sendPinNum = showValue('sendoutpinnum')
+
+    const UpAmountT = document.getElementById('availablebalance').innerText;
+
+    if (userAccountNum.length !== 11) {
+        alert('Account number must be 11 digit')
+        return;
+    }
+    if (sendPinNum === '1234') {
+        const newUpdateAmountForSenMoney = parseInt(UpAmountT) - parseInt(sendAmount);
+        document.getElementById('availablebalance').innerText = newUpdateAmountForSenMoney;
+
+    }
+})
+// bonus btn to manage bonus coupon
+document.getElementById('bonusbtn').addEventListener('click', function () {
+    const UpAmountTT = document.getElementById('availablebalance').innerText;
+    const couponValue = showValue('coupon')
+    if (couponValue === 'payoo!') {
+        document.getElementById('availablebalance').innerText = parseInt(UpAmountTT) + parseInt(UpAmountTT * 0.1);
+    }
+    else {
+        alert('coupon are not valid')
+    }
+
+})
 
 

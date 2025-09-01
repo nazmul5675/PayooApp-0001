@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main page</title>
+    <!-- font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- outfit font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +34,10 @@
                 <p>Available Balance</p>
             </div>
         </div>
-        <button id="log-out" class="btn ">Log Out</button>
+        <button id="log-out" class="btn "><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
     </div>
     <section class="p-5 bg-[#fff] border-t border-zinc-300 mb-10 rounded-b-xl">
-        <h1 class="font-bold text-3xl text-black mb-3 ">Wellcome to Payoo!</h1>
+        <h1 class="font-bold text-3xl text-black mb-3 "><i class="fa-solid fa-fire"></i>Wellcome to Payoo!</h1>
         <p class="font-normal text-zinc-500 mb-3">Enjoy easy and convenient financial services with us. Cashout charge
             is low </p>
 
@@ -167,16 +171,17 @@
         <div>
             <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
                 <p class="font-semibold text-[18px] fontext-black">Agent Number</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="agentnum" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter 11 digit number">
                 <p class="font-semibold text-[18px] fontext-black">Amount</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="cashoutammount" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter amount to withdraw">
 
                 <p class="font-semibold text-[18px] fontext-black"> Pin Number</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="cashoutpinnum" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter 4 Digit Pin">
-                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Withdraw Money</button>
+                <button id="withdrawbtn" class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Withdraw
+                    Money</button>
             </div>
         </div>
     </section>
@@ -188,16 +193,16 @@
         <div>
             <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
                 <p class="font-semibold text-[18px] fontext-black">User Account Number</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="useraccnum" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter 11 digit number">
                 <p class="font-semibold text-[18px] fontext-black">Amount</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="sendammount" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter amount to withdraw">
 
                 <p class="font-semibold text-[18px] fontext-black"> Pin Number</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="sendoutpinnum" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter 4 Digit Pin">
-                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Send Now</button>
+                <button id="sendnow" class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Send Now</button>
             </div>
         </div>
     </section>
@@ -209,10 +214,10 @@
         <div>
             <div class="flex flex-col bg-[#ffffff] p-5 rounded-xl">
                 <p class="font-semibold text-[18px] fontext-black">Enter Bonus Coupon</p>
-                <input class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
+                <input id="coupon" class="rounded-full p-3 my-3 border-none bg-slate-100" type="text"
                     placeholder="Enter your coupon">
 
-                <button class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Get Bonus</button>
+                <button id="bonusbtn" class="btn btn-xl bg-blue-700 text-white rounded-full my-3">Get Bonus</button>
             </div>
         </div>
     </section>
@@ -243,12 +248,6 @@
             </div>
         </div>
     </section>
-
-
-    <script>
-
-    </script>
-
     <script src="./main.js"></script>
 
 </body>
