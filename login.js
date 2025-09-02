@@ -8,7 +8,7 @@ document.getElementById('login').addEventListener('click', function () {
     const pinInput = document.getElementById('pin-number')
     const pinNumber = pinInput.value;
     if (mobileNumber === mobile && pinNumber === Pin) {
-        window.location.href = "main.html"
+        window.location.href = "./main.html"
     }
     else {
         console.log('show error');

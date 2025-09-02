@@ -85,7 +85,7 @@ document.getElementById('addmoneybluebtn').addEventListener('click', function ()
 
 // logout btn to turn back to login page
 document.getElementById('log-out').addEventListener('click', function () {
-    window.location.href = "index.html"
+    window.location.href = "./index.html"
 })
 
 // cash out btn to manage cash out and check pin num to validate
